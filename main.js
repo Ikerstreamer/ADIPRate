@@ -1,6 +1,3 @@
-(function() {
-    'use strict';
-
 
     var node = document.createElement("span");
     node.style.display = "inline-block";
@@ -17,7 +14,7 @@
     var reset = document.createElement("button");
     reset.onclick = function() {
         bestippm = 0;
-    };
+    }
     reset.innerHTML = "Reset";
     $("#infinityPoints2")[0].parentNode.appendChild(reset);
     setInterval(function() {
@@ -31,10 +28,7 @@
         }
         node.innerHTML = "Last: " + ippm2 + "/min<br>Current IP rate: " + shorten(gainedInfinityPoints() / player.thisInfinityTime600) + "/min<br>Best IP amount: " + shorten(bestip) + "<br>Best IP rate: " + shorten(bestippm600) + "/min<br>Best min: " + bestmin + "<br>Best bulk: " + bestbulk;
     }, 100);
-    /window.priorityOrderOld=Object.assign(priorityOrder,{});
     window.priorityOrder = function() {
         priorityOrderOld();
         document.getElementById("bigcrunch").click();
-    };
-    /
-})();
+    }
